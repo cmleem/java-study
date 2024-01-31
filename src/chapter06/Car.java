@@ -5,6 +5,7 @@ public class Car {
     String sheet;
     int seat = 4;
 
+    String model;
     public Car(String company, int speed){
         this.company = company;
         this.speed = speed;
@@ -31,6 +32,14 @@ public class Car {
         this.seat = seat;
     }
 
+    void setModel(String model){
+        this.model = model;
+    }
+
+    int getSpeed(){
+        return speed;
+    }
+
     public static void main(String args[]) {
         Car sonata1 = new Car("hyundai", 100);
         sonata1.changeSoftware("Apple");
@@ -45,6 +54,7 @@ public class Car {
         Car Lamborghini = new Car(100);
         Lamborghini.seatNumber(2);
         Lamborghini.printSpec();
+        Lamborghini.setModel("Urus");
     }
 }
 
