@@ -12,21 +12,28 @@ public class Main {
 			int num = scanner.nextInt();
 			scanner.nextLine();
 
-			if (num == 1)
-				businessContactAdd();
-			else if (num == 2)
-				personalContactAdd();
-			else if (num == 3)
-				AddressBook.displayContacts();
-			else if (num == 4) {
-				System.out.print("검색할 이름을 입력하세요: ");
-				String str = scanner.nextLine();
-				AddressBook.searchContact(str);
-			} else if (num == 5) {
-				System.out.println("프로그램을 종료합니다.");
-				break;
-			} else
-				System.out.println("올바른 번호를 입력하세요.");
+			switch (num) {
+				case 1:
+					businessContactAdd();
+					break;
+				case 2:
+					personalContactAdd();
+					break;
+				case 3:
+					AddressBook.displayContacts();
+					break;
+				case 4:
+					System.out.print("검색할 이름을 입력하세요: ");
+					String str = scanner.nextLine();
+					AddressBook.searchContact(str);
+					break;
+				case 5:
+					System.out.println("프로그램을 종료합니다.");
+					return;
+				default:
+					System.out.println("올바른 번호를 입력하세요.");
+			}
+
 		}
 	}
 
