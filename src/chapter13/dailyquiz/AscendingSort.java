@@ -8,6 +8,30 @@ public class AscendingSort {
 	public int[] solution(int[] array1, int[] array2) {
 		int[] result = new int[array1.length + array2.length];
 
+		/*int index = 0, i = 0, j = 0;
+		while (i < array1.length && j < array2.length) {
+			if (array1[i] < array2[j]) {
+				result[index] = array1[i];
+				index++;
+				i++;
+			} else {
+				result[index] = array2[j];
+				index++;
+				j++;
+			}
+		}
+
+		while (i < array1.length) {
+			result[index] = array1[i];
+			index++;
+			i++;
+		}
+		while (j < array2.length) {
+			result[index] = array2[j];
+			index++;
+			j++;
+		}*/
+
 		for (int i = 0; i < array1.length; i++) {
 			result[i] = array1[i];
 		}
